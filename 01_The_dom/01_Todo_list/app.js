@@ -10,7 +10,11 @@ const ul = document.querySelector("ul");
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
   if (todoArray.length != 0) {
-    ul.innerHTML += `<li>${todoArray.pop()}</li>`;
+    //ul.innerHTML += `<li>${todoArray.pop()}</li>`;
+    // Or
+    const li = document.createElement("li");
+    li.textContent = todoArray.pop();
+    ul.append(li);
   }
 });
 
